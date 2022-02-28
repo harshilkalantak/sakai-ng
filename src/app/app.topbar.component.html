@@ -1,13 +1,17 @@
-<div class="layout-topbar">
+
+<!-- <div class="layout-topbar"> -->
+    <header class="layout-topbar">
+   <div class="set-topbar"> 
     <a class="layout-topbar-logo" routerLink="">
-        <img src="assets/layout/images/{{appMain.config.dark ? 'logo-white' : 'logo-dark'}}.svg" alt="logo">
-        <span>SAKAI</span>
+        <img src="assets/layout/images/{{appMain.config.dark ? 'logo-white' : 'mylogo'}}.png" alt="logo">
+        <!-- <span>SAKAI</span> -->
     </a>
+
 
     <a class="p-link layout-menu-button layout-topbar-button" href="#" (click)="appMain.toggleMenu($event)">
         <i class="pi pi-bars"></i>
     </a>
-
+    </div>
     <a class="p-link layout-topbar-menu-button layout-topbar-button" href="#" (click)="appMain.toggleTopMenu($event)">
         <i class="pi pi-ellipsis-v"></i>
     </a>
@@ -26,4 +30,5 @@
             <span>Profile</span>
         </a>
     </div>
-</div>
+</header>
+<!-- </div> -->

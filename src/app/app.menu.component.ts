@@ -1,10 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+ import { Component, OnInit } from '@angular/core';
 import { AppMainComponent } from './app.main.component';
 
-@Component({
+@Component({    
     selector: 'app-menu',
     template: `
         <div class="layout-menu-container">
+            
+        <p-scrollPanel [style]="{width: '100%', height: '540px'}">
             <ul class="layout-menu" role="menu" (keydown)="onKeydown($event)">
                 <li app-menu class="layout-menuitem-category" *ngFor="let item of model; let i = index;" [item]="item" [index]="i" [root]="true" role="none">
                     <div class="layout-menuitem-root-text" [attr.aria-label]="item.label">{{item.label}}</div>
@@ -16,6 +18,7 @@ import { AppMainComponent } from './app.main.component';
                     <img src="assets/layout/images/{{appMain.config.dark ? 'banner-primeblocks-dark' : 'banner-primeblocks'}}.png" alt="Prime Blocks" class="w-full mt-3"/>
                 </a>
             </ul>
+            </p-scrollPanel>
         </div>
     `
 })
